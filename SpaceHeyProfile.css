@@ -1,108 +1,295 @@
-/* SpaceHey Profile CSS */
+<style>
+/* import a deathmetal-style font */
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
 
-/* General body */
+:root {
+    --headers: #ff2b2b;
+    --text: #e0e0e0;
+    --names: #ff2b2b;
+    --links: #9a9a9a;
+    --background_image: url('https://files.catbox.moe/h4s58r.png');
+    --font-family: "Metal Mania", cursive;
+    --curve: 0px;
+    --borders: 2px solid #ff2b2b;
+}
+
+/* background */
 body {
-    background-color: #1a0533;
-    color: #ffffff;
-    font-family: 'Trebuchet MS', Arial, sans-serif;
+    background: var(--background_image) no-repeat center center fixed;
+    background-size: 100% 100%;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges; /* fallback */
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
 }
 
-/* Links */
+/* fullscreen GIF overlay */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background-image: url("https://files.catbox.moe/35rmoi.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 999999;
+    opacity: 0.1; /* adjust transparency here */
+}
+
+/* text colors */
+h3, h4, h5 {
+    color: var(--headers) !important;
+}
 a {
-    color: #cc66ff;
-    text-decoration: none;
+    color: var(--links) !important;
+}
+p, h2, .count {
+    color: var(--text);
+}
+.friends a p {
+    color: var(--names);
+}
+nav label {
+    color: var(--links);
+}
+.section h4 {
+    color: var(--headers);
+}
+.blurbs .heading {
+    display: none;
+}
+.details p:last-child {
+    color: var(--text);
 }
 
-a:hover {
-    color: #ff99ff;
-    text-decoration: underline;
-}
-
-/* Profile name */
-span.nametext {
-    font-size: 18px;
+/* profile name */
+h1 {
+    color: #ff2b2b;
+    font-family: var(--font-family);
+    font-size: 38px !important;
     font-weight: bold;
-    color: #cc66ff;
+    text-transform: uppercase;
+    border: var(--borders);
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #b20000;
 }
 
-/* Profile tables */
-table, td {
-    background-color: #2a0a4a;
-    border: 1px solid #660099;
+/* navigation */
+nav {
+    background-color: black;
+    border: var(--borders);
+    border-radius: var(--curve);
+    text-align: center;
+}
+nav .top, nav .links {
+    background-color: transparent;
+}
+nav .links a {
+    color: #e0e0e0 !important;
+    transition: all 0.3s ease-in-out;
+    text-shadow: none;
+}
+nav .links a:hover {
+    color: #ff2b2b !important;
+    text-shadow: 0 0 5px #ff2b2b;
+}
+nav .links li:not(:last-child)::after,
+footer .links li:not(:last-child)::after {
+    content: "|";
+    color: white;
 }
 
-/* Table headers */
-td.interestsanddetails,
-td.contacttable,
-td.userProfileURL {
-    background-color: #3d0066;
-    color: #ffffff;
+/* SpaceHey Logo Replacement */
+/* Original snippet concept by psyclone: https://layouts.spacehey.com/layout?id=38232 */
+
+.logo {
+  content: url(https://media.discordapp.net/attachments/699892630427009054/1133092659150454967/image.png)
 }
 
-/* About me / general profile sections */
-.profileInfo {
-    background-color: #2a0a4a;
-    border: 2px solid #9900cc;
-    border-radius: 4px;
-    padding: 8px;
+/* nav img.logo {
+    filter: brightness(0) saturate(100%) invert(22%) sepia(95%) saturate(7476%) hue-rotate(356deg) brightness(102%) contrast(108%) !important;
+} 
+Save for later??
+*/
+
+/* search */
+.search-wrapper input[type=text] {
+    background-color: transparent !important;
+    border: 2px solid var(--links) !important;
+    color: var(--links) !important;
+    border-radius: var(--curve) !important;
+}
+button {
+    border: 0;
+    border-radius: var(--curve) !important;
+    font-family: var(--font-family) !important;
+    background-color: transparent !important;
+    color: var(--links) !important;
 }
 
-/* Blurbs (About me, Who I'd like to meet) */
-.blurb {
-    background-color: #1f0840;
-    border: 1px solid #660099;
-    padding: 6px;
+/* online status */
+.online {
+    color: var(--links) !important;
+    text-transform: lowercase;
+    text-align: center;
+}
+.online img {
+    filter: brightness(0) saturate(100%) invert(22%) sepia(95%) saturate(7476%) hue-rotate(356deg) brightness(102%) contrast(108%) !important;
 }
 
-/* Extended network banner */
-.extendedNetwork {
-    background-color: #3d0066;
-    color: #ffccff;
+/* fonts */
+a, p, b, nav label, .section {
+    font-family: var(--font-family);
+    font-size: 13px;
+    font-weight: normal;
+    text-shadow: 0 0 0 black;
+}
+h2, h3, h4, h5 {
+    font-family: var(--font-family);
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #ff2b2b !important;
+    text-shadow: 0 0 6px black;
 }
 
-/* Top friends */
-.friendSpace td {
-    background-color: #2a0a4a;
+/* hr */
+hr {
+    height: 2px;
+    background: #ff2b2b;
+    border: none;
 }
 
-/* Comments section */
-.commentSection {
-    background-color: #1f0840;
+/* content boxes */
+.blurbs, .mood, .friends, .contact,
+.profile .table, .blog-preview, .profile .table-section {
+    border-radius: var(--curve);
+    border: var(--borders) !important;
+    background-color: rgba(0,0,0,0.85) !important;
+}
+.comment-replies {
+    border: 4px groove #ff2b2b;
+}
+.comment-reply:not(:first-child) {
+    border-top: 2px solid var(--links);
+}
+td {
+    background-color: transparent !important;
 }
 
-/* Contact table buttons */
-.contactTable a {
-    background-color: #660099;
-    color: #ffffff;
-    border: 1px solid #9900cc;
-    padding: 2px 6px;
-    border-radius: 3px;
+/* main content */
+main {
+    background: transparent;
+    border-radius: var(--curve);
+    border: none;
+    outline: none;
+}
+.table-section {
+    border: none !important;
+}
+.heading {
+    background: none !important;
 }
 
-.contactTable a:hover {
-    background-color: #9900cc;
-    text-decoration: none;
+/* profile info */
+.profile-info {
+    background-color: black !important;
+    border: var(--borders) !important;
+    border-radius: var(--curve) !important;
 }
 
-/* Music player */
-embed {
+/* images / friends */
+.profile-pic {
+    padding: 10px;
+}
+.friends-grid {
+    text-align: center;
+}
+
+/* spacing */
+h2, h3, h4, h5, p {
+    padding-left: 5px !important;
+}
+.contact .heading, .profile .table-section .heading,
+.blog-preview .heading, .profile .friends .heading, .mood {
+    padding: 5px !important;
+    text-align: center;
+}
+.mood, .friends {
+    margin-bottom: 10px;
+}
+.url-info {
+    display: none;
+}
+.general-about .details {
+    background: black;
+    border: var(--borders);
+    padding-bottom: 70px;
+    margin-bottom: 10px;
+}
+
+/* comments box */
+.comments-table {
     display: block;
+    height: 500px !important;
+    overflow-y: scroll;
+    outline: none !important;
+    border-radius: 3px;
+    border-spacing: 6px;
+    border: transparent;
+}
+.comments-table td {
+    border: 2px solid #ff2b2b;
+    background-color: rgba(0,0,0,0.7);
+    font-family: var(--font-family);
 }
 
-/* Scrollbar */
+/* footer */
+footer {
+    background: black;
+    border: var(--borders);
+    padding: 10px;
+    margin-top: 10px;
+    font-family: var(--font-family);
+}
+
+/* scrollbar */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 5px;
+    height: 12px;
 }
-
 ::-webkit-scrollbar-track {
-    background: #1a0533;
+    border-radius: var(--curve);
+    border: 1px solid black;
 }
-
 ::-webkit-scrollbar-thumb {
-    background: #660099;
-    border-radius: 4px;
+    background: #ff2b2b;
+    border-radius: var(--curve);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #b20000;
+}
+/* Red/Black tint on friends' profile pics */
+.friends-grid .profile-pic img {
+    position: relative;
+    display: inline-block;
+    filter: grayscale(30%) brightness(60%) sepia(20%) hue-rotate(-20deg) saturate(150%);
+    transition: filter 0.3s ease;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: #9900cc;
+.friends-grid .profile-pic img:hover {
+    filter: grayscale(0%) brightness(100%) sepia(40%) hue-rotate(-10deg) saturate(300%);
 }
+
+</style>
+<style>* {cursor: url(https://cur.cursors-4u.net/nature/nat-1/nat7.cur), auto !important;}</style><a href="https://www.cursors-4u.com/cursor/2005/04/17/nat7-10.html" target="_blank" title="Bear Paw Print"><img src="https://cur.cursors-4u.net/cursor.png" alt="Bear Paw Print" style="position:absolute; top: 0px; right: 0px;"/></a>
+
+
+
