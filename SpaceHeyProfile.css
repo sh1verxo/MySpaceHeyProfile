@@ -1,0 +1,108 @@
+/* SpaceHey Profile CSS */
+
+/* General body */
+body {
+    background-color: #1a0533;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+/* Links */
+a {
+    color: #cc66ff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff99ff;
+    text-decoration: underline;
+}
+
+/* Profile name */
+span.nametext {
+    font-size: 18px;
+    font-weight: bold;
+    color: #cc66ff;
+}
+
+/* Profile tables */
+table, td {
+    background-color: #2a0a4a;
+    border: 1px solid #660099;
+}
+
+/* Table headers */
+td.interestsanddetails,
+td.contacttable,
+td.userProfileURL {
+    background-color: #3d0066;
+    color: #ffffff;
+}
+
+/* About me / general profile sections */
+.profileInfo {
+    background-color: #2a0a4a;
+    border: 2px solid #9900cc;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+/* Blurbs (About me, Who I'd like to meet) */
+.blurb {
+    background-color: #1f0840;
+    border: 1px solid #660099;
+    padding: 6px;
+}
+
+/* Extended network banner */
+.extendedNetwork {
+    background-color: #3d0066;
+    color: #ffccff;
+}
+
+/* Top friends */
+.friendSpace td {
+    background-color: #2a0a4a;
+}
+
+/* Comments section */
+.commentSection {
+    background-color: #1f0840;
+}
+
+/* Contact table buttons */
+.contactTable a {
+    background-color: #660099;
+    color: #ffffff;
+    border: 1px solid #9900cc;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+.contactTable a:hover {
+    background-color: #9900cc;
+    text-decoration: none;
+}
+
+/* Music player */
+embed {
+    display: block;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a0533;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #660099;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #9900cc;
+}
