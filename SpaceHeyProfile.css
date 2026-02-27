@@ -277,3 +277,14 @@ footer {
 
 </style>
 <style>* {cursor: url(https://cur.cursors-4u.net/nature/nat-1/nat7.cur), auto !important;}</style><a href="https://www.cursors-4u.com/cursor/2005/04/17/nat7-10.html" target="_blank" title="Bear Paw Print"><img src="https://cur.cursors-4u.net/cursor.png" alt="Bear Paw Print" style="position:absolute; top: 0px; right: 0px;"/></a>
+<!-- ADDITIONAL SNIPPETS --!>
+<style>
+/* Stuff here im figuring out loll */
+/* Red Logo Overlay */
+.logo {
+  content: url("https://files.catbox.moe/x8zikx.png");
+  filter: brightness(0) saturate(100%)
+          invert(17%) sepia(97%) saturate(7425%)
+          hue-rotate(356deg) brightness(95%) contrast(115%);
+}
+</style>
