@@ -287,4 +287,16 @@ footer {
           invert(17%) sepia(97%) saturate(7425%)
           hue-rotate(356deg) brightness(95%) contrast(115%);
 }
+/* --- Pixel-perfect profile photo (no tint/dither) --- */
+.profile-pic img,
+.profile-pic img.pfp-fallback {
+  filter: none !important;
+  -webkit-filter: none !important;
+
+  image-rendering: pixelated !important;
+  image-rendering: crisp-edges !important; /* fallback */
+
+  /* optional: prevents blur from transforms in some cases */
+  transform: translateZ(0);
+}
 </style>
