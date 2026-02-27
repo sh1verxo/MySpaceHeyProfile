@@ -106,19 +106,6 @@ footer .links li:not(:last-child)::after {
     color: white;
 }
 
-/* SpaceHey Logo Replacement */
-/* Original snippet concept by psyclone: https://layouts.spacehey.com/layout?id=38232 */
-
-.logo {
-  content: url(https://media.discordapp.net/attachments/699892630427009054/1133092659150454967/image.png)
-}
-
-/* nav img.logo {
-    filter: brightness(0) saturate(100%) invert(22%) sepia(95%) saturate(7476%) hue-rotate(356deg) brightness(102%) contrast(108%) !important;
-} 
-Save for later??
-*/
-
 /* search */
 .search-wrapper input[type=text] {
     background-color: transparent !important;
@@ -290,6 +277,3 @@ footer {
 
 </style>
 <style>* {cursor: url(https://cur.cursors-4u.net/nature/nat-1/nat7.cur), auto !important;}</style><a href="https://www.cursors-4u.com/cursor/2005/04/17/nat7-10.html" target="_blank" title="Bear Paw Print"><img src="https://cur.cursors-4u.net/cursor.png" alt="Bear Paw Print" style="position:absolute; top: 0px; right: 0px;"/></a>
-
-
-
