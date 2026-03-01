@@ -7,7 +7,7 @@ everyone to use, its not like ill be profeting
 iff of this anyways!
 
 # Usage
-If you like the layout, you are free to copy
-and paste it and alter ut in any way you like!
-I do not plan on changing its theme, only adding 
+If you like the layout, you are free to copy, 
+paste, and alter it in any way you like!
+I do not plan on changing its overall theme, only adding 
 onto it and improving it.
